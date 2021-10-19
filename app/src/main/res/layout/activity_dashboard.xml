@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/background"
     android:layout_height="match_parent"
     tools:context=".Dashboard">
 
@@ -17,6 +18,7 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
+            android:background="#80FFFFFF"
             android:layout_height="match_parent">
 
             <ImageView
@@ -37,11 +39,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="36dp"
+                    android:layout_marginTop="32dp"
                     android:gravity="center_horizontal"
                     android:text="Dashboard"
                     android:textAlignment="center"
@@ -50,10 +53,9 @@
                     android:textStyle="bold"
                     app:autoSizeTextType="none"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintHorizontal_bias="0.092"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
 
                 <SearchView
                     android:id="@+id/search"
