@@ -7,12 +7,22 @@
     android:layout_height="match_parent"
     tools:context=".Dashboard">
 
-    <com.google.android.material.navigationrail.NavigationRailView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res/android"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_height="match_parent"
+        app:layout_width="match_parent">
 
-    </com.google.android.material.navigationrail.NavigationRailView>
+        <com.google.android.material.navigationrail.NavigationRailView
+            app:id="@+id/dashboardNav"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_height="match_parent"
+            app:layout_width="wrap_content"/>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
