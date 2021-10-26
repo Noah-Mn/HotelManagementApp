@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dashboard"
+        android:title="@string/dashboard"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_dashboard_24"
+        />
+
+    <item
+        android:id="@+id/timeline"
+        android:title="@string/timeline"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_timeline_24"
+        />
+
+    <item
+        android:id="@+id/rooms"
+        android:title="@string/rooms"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_stars_24"
+        />
+
+    <item
+        android:id="@+id/guests"
+        android:title="@string/guests"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_people_24"
+        />
+
+    <item
+        android:id="@+id/finance"
+        android:title="@string/finance"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_attach_money_24"
+        />
+</menu>
