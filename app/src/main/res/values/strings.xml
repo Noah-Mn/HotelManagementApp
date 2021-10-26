@@ -5,4 +5,5 @@
     <string name="timeline">Timeline</string>
     <string name="guests">Guests</string>
     <string name="finance">Finance</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
 </resources>
