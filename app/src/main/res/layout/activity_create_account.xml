@@ -7,18 +7,27 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/materialTextView"
-        android:layout_width="wrap_content"
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:text="WELCOME TO ......."
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        app:cardCornerRadius="25dp"
+        android:elevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="WELCOME TO ......."
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -39,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/black"
-           />
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
 
