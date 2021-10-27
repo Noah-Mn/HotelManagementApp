@@ -158,7 +158,7 @@
         app:layout_constraintEnd_toStartOf="@+id/materialLogin"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginBtn"
+        app:layout_constraintTop_toBottomOf="@+id/signupBtn"
         app:layout_constraintVertical_bias="0.432" />
 
     <com.google.android.material.textview.MaterialTextView
