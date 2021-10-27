@@ -10,20 +10,21 @@ import android.widget.TextView;
 
 public class Login extends AppCompatActivity {
     Button loginBtn;
-    TextView materialCreateAcc, materialForgetPasswd;
+    TextView materialCreateAcc, materialForgotPasswd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         loginBtn = findViewById(R.id.loginBtn);
         materialCreateAcc = findViewById(R.id.materialCreateAcc);
-        materialForgetPasswd = findViewById(R.id.materialForgetPasswd);
+        materialForgotPasswd = findViewById(R.id.materialForgotPasswd);
 
-        materialForgetPasswd.setOnClickListener(new View.OnClickListener() {
+        materialForgotPasswd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Login.this, ForgotPassword.class));
+                startActivity(new Intent(Login.this,ForgotPassword.class));
             }
         });
         materialCreateAcc.setOnClickListener(new View.OnClickListener() {
