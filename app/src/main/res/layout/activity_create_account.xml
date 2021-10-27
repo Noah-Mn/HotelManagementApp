@@ -150,8 +150,6 @@
         android:id="@+id/materialCreateAcc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
         android:layout_marginBottom="50dp"
         android:text="@string/already_have_an_account"
         android:textColor="@color/black"
@@ -165,15 +163,17 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/materialLogin"
-        android:layout_width="35dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="92dp"
-        android:layout_marginRight="92dp"
         android:layout_marginBottom="50dp"
         android:text="Login"
+        android:paddingStart="5dp"
+        android:paddingLeft="5dp"
         android:textColor="#0A51E1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.622"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/materialCreateAcc"
         app:layout_constraintVertical_bias="0.0" />
 
