@@ -139,43 +139,47 @@
         android:layout_marginBottom="50dp"
         android:text="@string/signup"
         android:backgroundTint="#1B9313"
-        app:layout_constraintBottom_toTopOf="@+id/materialCreateAcc"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirmPassword" />
 
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/materialCreateAcc"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:text="@string/already_have_an_account"
-        android:textColor="@color/black"
-        android:textColorLink="#0A51E1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/materialLogin"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupBtn"
-        app:layout_constraintVertical_bias="0.432" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/materialLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:text="Login"
-        android:paddingStart="5dp"
-        android:paddingLeft="5dp"
-        android:textColor="#0A51E1"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.622"
+        android:gravity="center_horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/materialCreateAcc"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/signupBtn">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialCreateAcc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:text="@string/already_have_an_account"
+            android:textColor="@color/black"
+            android:textColorLink="#0A51E1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:paddingStart="5dp"
+            android:paddingLeft="5dp"
+            android:text="Login"
+            android:textColor="#0A51E1" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
