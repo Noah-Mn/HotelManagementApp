@@ -15,4 +15,7 @@
     <string name="password">Password</string>
     <string name="email_address">Email Address</string>
     <string name="username">Username</string>
+    <string name="reset_your_password">Reset your password</string>
+    <string name="new_password">New password</string>
+    <string name="confirm">Confirm</string>
 </resources>
