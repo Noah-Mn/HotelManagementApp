@@ -118,9 +118,9 @@
         android:textColorHint="@color/black"
         app:endIconMode="password_toggle"
         app:endIconTint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/loginBtn"
+        app:layout_constraintBottom_toTopOf="@+id/signupBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialPassword">
 
@@ -132,12 +132,12 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/loginBtn"
+        android:id="@+id/signupBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="50dp"
-        android:text="@string/login"
+        android:text="@string/signup"
         android:backgroundTint="#1B9313"
         app:layout_constraintBottom_toTopOf="@+id/materialCreateAcc"
         app:layout_constraintEnd_toEndOf="parent"
