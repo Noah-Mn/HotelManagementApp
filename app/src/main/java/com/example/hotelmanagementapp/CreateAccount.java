@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -15,7 +16,7 @@ import java.util.Objects;
 
 public class CreateAccount extends AppCompatActivity {
     TextView materialLogin;
-    Button signupBtn;
+    MaterialButton signupBtn;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     DatabaseHelper databaseHelper;
