@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class ForgotPassword extends AppCompatActivity {
+
     Button confirmBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,11 +17,6 @@ public class ForgotPassword extends AppCompatActivity {
 
         confirmBtn = findViewById(R.id.confirmBtn);
 
-        confirmBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ForgotPassword.this, Login.class));
-            }
-        });
+        confirmBtn.setOnClickListener(v -> startActivity(new Intent(ForgotPassword.this, Login.class)));
     }
 }
