@@ -5,12 +5,12 @@ public class DatabaseHelper {
     public DatabaseHelper() {
     }
 
-    public String getTextInputEditText() {
+    public String getTextUsername() {
         return textUsername;
     }
 
-    public void setTextInputEditText(String textInputEditText) {
-        this.textUsername = textInputEditText;
+    public void setTextUsername(String textUsername) {
+        this.textUsername = textUsername;
     }
 
     public String getTextEmailAddress() {
@@ -37,8 +37,8 @@ public class DatabaseHelper {
         this.textConfirmPassword = textConfirmPassword;
     }
 
-    public DatabaseHelper(String textInputEditText, String textEmailAddress, String textPassword, String textConfirmPassword) {
-        this.textUsername = textInputEditText;
+    public DatabaseHelper(String textUsername, String textEmailAddress, String textPassword, String textConfirmPassword) {
+        this.textUsername = textUsername;
         this.textEmailAddress = textEmailAddress;
         this.textPassword = textPassword;
         this.textConfirmPassword = textConfirmPassword;
