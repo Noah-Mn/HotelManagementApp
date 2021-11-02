@@ -21,8 +21,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/materialLogEmail"
         android:layout_width="match_parent"
+        app:errorEnabled="true"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
@@ -36,6 +37,7 @@
         app:layout_constraintVertical_bias="0.26">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/loginEmail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textEmailAddress"
@@ -46,26 +48,28 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/materialPassword"
+        android:id="@+id/materialLogPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:endIconMode="password_toggle"
-        app:endIconTint="@color/black"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:hint="Password"
         android:textColorHint="@color/black"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/black"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+        app:layout_constraintTop_toBottomOf="@+id/materialLogEmail">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/loginPassword"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -79,7 +83,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/materialLogPassword" />
 
     <LinearLayout
         android:layout_width="match_parent"

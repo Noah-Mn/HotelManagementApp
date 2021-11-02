@@ -24,17 +24,18 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/username"
+        android:id="@+id/materialUsername"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="5dp"
         android:hint="@string/username"
         android:textColorHint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toTopOf="@+id/materialEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,9 +45,8 @@
             android:id="@+id/textUsername"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
-            android:textColor="@color/black"
             android:inputType="textPersonName"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="20dp" />
@@ -54,21 +54,22 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/materialEmailAddress"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="5dp"
         android:hint="@string/email_address"
         android:textColorHint="@color/black"
+        app:errorEnabled="true"
         app:layout_constraintBottom_toTopOf="@+id/materialPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username">
+        app:layout_constraintTop_toBottomOf="@+id/materialUsername">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textEmailAddress"
@@ -85,18 +86,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="5dp"
         android:hint="@string/password"
         android:textColorHint="@color/black"
         app:endIconMode="password_toggle"
         app:endIconTint="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/confirmPassword"
+        app:errorEnabled="true"
+        app:layout_constraintBottom_toTopOf="@+id/materialConfirmPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+        app:layout_constraintTop_toBottomOf="@+id/materialEmailAddress">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textPassword"
@@ -109,18 +111,19 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/confirmPassword"
+        android:id="@+id/materialConfirmPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="10dp"
         android:hint="@string/confirm_password"
         android:textColorHint="@color/black"
         app:endIconMode="password_toggle"
         app:endIconTint="@color/black"
+        app:errorEnabled="true"
         app:layout_constraintBottom_toTopOf="@+id/signupBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -147,7 +150,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/materialConfirmPassword" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
