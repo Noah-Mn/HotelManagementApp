@@ -100,8 +100,8 @@ public class Login extends AppCompatActivity {
                     if (task.isSuccessful()){
                         progressDialog.dismiss();
                         Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_SHORT).show();
-                        FirebaseUser user = firebaseAuth.getCurrentUser();
-                        updateUI(user);
+                        FirebaseUser manager = firebaseAuth.getCurrentUser();
+                        updateUI(manager);
                         startActivity(new Intent(Login.this, Dashboard.class));
                     }else {
                         progressDialog.dismiss();
@@ -113,6 +113,6 @@ public class Login extends AppCompatActivity {
         }
     }
 
-    private void updateUI(FirebaseUser user) {
+    private void updateUI(FirebaseUser manager) {
     }
 }

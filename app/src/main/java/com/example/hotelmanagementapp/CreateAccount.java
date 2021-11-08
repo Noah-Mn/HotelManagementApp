@@ -102,8 +102,8 @@ public class CreateAccount extends AppCompatActivity {
                             if (task.isSuccessful()){
                                 progressDialog.dismiss();
                                 Toast.makeText(getApplicationContext(),"Account successfully created!",Toast.LENGTH_SHORT).show();
-                                FirebaseUser user = firebaseAuth.getCurrentUser();
-                                updateUI(user);
+                                FirebaseUser manager = firebaseAuth.getCurrentUser();
+                                updateUI(manager);
                                 startActivity(new Intent(CreateAccount.this, Login.class));
                             }else {
                                 progressDialog.dismiss();
