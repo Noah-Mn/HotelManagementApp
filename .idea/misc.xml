@@ -16,6 +16,7 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33645833333333336" />
         <entry key="app/src/main/res/layout/activity_pie_chart.xml" value="0.16822916666666668" />
+        <entry key="app/src/main/res/layout/activity_select_user_type.xml" value="0.21" />
       </map>
     </option>
   </component>
