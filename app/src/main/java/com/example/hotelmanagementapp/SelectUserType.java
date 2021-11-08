@@ -2,7 +2,9 @@ package com.example.hotelmanagementapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import com.google.android.material.button.MaterialButton;
@@ -17,6 +19,18 @@ public class SelectUserType extends AppCompatActivity {
         ManagerButton = findViewById(R.id.ManagerButton);
         RecepButton = findViewById(R.id.RecepButton);
 
+        ManagerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SelectUserType.this, Login.class));
+            }
+        });
+        RecepButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SelectUserType.this, RecepLogin.class));
+            }
+        });
 
     }
 }

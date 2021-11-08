@@ -53,6 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-50dp"
+                app:cornerRadius="20dp"
                 android:backgroundTint="#0A2F9F"
                 android:text="Proceed" />
         </LinearLayout>
@@ -95,6 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-50dp"
+                app:cornerRadius="20dp"
                 android:backgroundTint="#0A2F9F"
                 android:text="Proceed" />
         </LinearLayout>
