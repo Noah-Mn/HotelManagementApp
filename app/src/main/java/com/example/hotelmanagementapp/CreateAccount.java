@@ -67,11 +67,11 @@ public class CreateAccount extends AppCompatActivity {
         materialConfirmPassword = findViewById(R.id.materialConfirmPassword);
         progressDialog = new ProgressDialog(this);
 
-        signupBtn.setOnClickListener(v -> performAuthentication());
+        signupBtn.setOnClickListener(v -> performSignup());
 
         materialLogin.setOnClickListener(v -> startActivity(new Intent(CreateAccount.this, Login.class)));
     }
-    private void performAuthentication(){
+    private void performSignup(){
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
 
