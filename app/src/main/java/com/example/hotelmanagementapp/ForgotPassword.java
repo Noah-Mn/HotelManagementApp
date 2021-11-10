@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -22,6 +23,7 @@ public class ForgotPassword extends AppCompatActivity {
     Button confirmBtn;
     TextInputEditText newPassword, confirmPassword, emailAddress;
     ProgressDialog progressDialog;
+    TextInputLayout materialEmailAddress, materialNewPassword, materialConfirmPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,9 @@ public class ForgotPassword extends AppCompatActivity {
         confirmPassword = findViewById(R.id.confirmPassword);
         emailAddress = findViewById(R.id.emailAddress);
         progressDialog = new ProgressDialog(this);
+        materialEmailAddress = findViewById(R.id.materialEmailAddress);
+        materialNewPassword = findViewById(R.id.materialNewPassword);
+        materialConfirmPassword = findViewById(R.id.materialConfirmPassword);
 
        confirmBtn.setOnClickListener(view -> ResetPassword());
     }
@@ -70,6 +75,10 @@ public class ForgotPassword extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "" + task.getException(), Toast.LENGTH_SHORT).show();
             }
           });
+      }else {
+          materialNewPassword.setError("Passwords don't match!");
+          materialConfirmPassword.setError("Passwords don't match!");
       }
+
     }
 }
