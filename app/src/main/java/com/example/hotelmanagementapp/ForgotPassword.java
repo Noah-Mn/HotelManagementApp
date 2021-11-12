@@ -1,25 +1,21 @@
 package com.example.hotelmanagementapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.Objects;
+
 public class ForgotPassword extends AppCompatActivity {
-    private static final String TAG = " ";
     Button confirmBtn;
     TextInputEditText newPassword, confirmPassword, emailAddress;
     ProgressDialog progressDialog;
@@ -44,9 +40,9 @@ public class ForgotPassword extends AppCompatActivity {
     private void ResetPassword(){
       FirebaseUser manager = FirebaseAuth.getInstance().getCurrentUser();
       FirebaseAuth auth = FirebaseAuth.getInstance();
-      String New_Password = newPassword.getText().toString();
-      String Confirm_Password = confirmPassword.getText().toString();
-      String Email = emailAddress.getText().toString();
+      String New_Password = Objects.requireNonNull(newPassword.getText()).toString();
+      String Confirm_Password = Objects.requireNonNull(confirmPassword.getText()).toString();
+      String Email = Objects.requireNonNull(emailAddress.getText()).toString();
 
       if (New_Password.equals(Confirm_Password)){
 
@@ -55,19 +51,17 @@ public class ForgotPassword extends AppCompatActivity {
           progressDialog.setCanceledOnTouchOutside(false);
           progressDialog.show();
 
+          assert manager != null;
           manager.updatePassword(New_Password).addOnCompleteListener(task -> {
             if (task.isSuccessful()){
                 progressDialog.dismiss();
                 Toast.makeText(getApplicationContext(), "Password updated ", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(ForgotPassword.this, Login.class));
-                auth.sendPasswordResetEmail(Email).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()){
-                            Toast.makeText(getApplicationContext(), "Email sent", Toast.LENGTH_SHORT).show();
-                        }else {
-                            Toast.makeText(getApplicationContext(), "" + task.getException(), Toast.LENGTH_SHORT).show();
-                        }
+                auth.sendPasswordResetEmail(Email).addOnCompleteListener(task1 -> {
+                    if (task1.isSuccessful()){
+                        Toast.makeText(getApplicationContext(), "Email sent", Toast.LENGTH_SHORT).show();
+                    }else {
+                        Toast.makeText(getApplicationContext(), "" + task1.getException(), Toast.LENGTH_SHORT).show();
                     }
                 });
             }else {
