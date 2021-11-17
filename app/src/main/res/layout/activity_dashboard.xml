@@ -26,7 +26,7 @@
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:layout_width="match_parent"
-                android:background=""
+                app:menu="@menu/appbar_menu"
                 android:layout_height="wrap_content">
 
             </com.google.android.material.appbar.MaterialToolbar>
