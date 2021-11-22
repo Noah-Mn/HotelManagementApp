@@ -3,6 +3,7 @@ package com.example.hotelmanagementapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Window;
 
 public class Dashboard extends AppCompatActivity {
 
